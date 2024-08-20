@@ -1,4 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 *{
     padding: 0;
     margin: 0;
+}
+
+:root{
+    --primary-color: #D8DFE8;
+    --second-color: white;
+    --thirty-color: rgba(41, 41, 126, 0.911);
+    --forty-color: gray;
+    --font-inter: "Inter", sans-serif;
+}
+body{
+    background-color: var(--primary-color);
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    font-size: 16;
+    background-color: var(--forty-color);
 }
