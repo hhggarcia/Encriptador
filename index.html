@@ -9,20 +9,54 @@
   <body>
     <header class="navbar" id="header">
       <img class="navbar_img" src="/img/Logo.png" />
-      <h2 class="navbar_titulo">Encriptador</h2>
     </header>
-    <main id="main">
+    <main class="main" id="main">
       <section class="texto_encriptado">
-        <textarea class="texto" placeholder="Ingrese texto aquí"></textarea>
-        <button class="boton_encriptar">Encriptar</button>
-        <button class="boton_desencriptar">Desencriptar</button>
+        <textarea
+          id="texto"
+          class="texto"
+          placeholder="Ingrese texto aquí"
+        ></textarea>
+        <div class="contenedor_botones">
+          <div class="validation">
+            <img src="./img/bi_exclamation-circle-fill.png" />
+            <span class="mensaje_validacion"
+              >Solo letras minúsculas y sin asentos</span
+            >
+          </div>
+          <div class="btns">
+            <button class="btn boton_encriptar" onclick="Encriptar_Texto()">
+              Encriptar!
+            </button>
+            <button
+              class="btn boton_desencriptar"
+              onclick="Desencriptar_Texto()"
+            >
+              Desencriptar!
+            </button>
+          </div>
+        </div>
       </section>
       <section class="mostrar_texto">
-        <textarea class="mostrar_texto"></textarea>
-        <button class="boton_copiar">Encriptar</button>
+        <div id="contenedor_texto" class="contenedor_texto">
+          <textarea id="mostrarTexto" class="mostrar_texto_texto"></textarea>
+          <button class="btn boton_copiar" onclick="copiarTexto()">
+            Copiar
+          </button>
+        </div>
+
+        <div id="contenedor_sinTexto" class="contenedor_sinTexto">
+          <img class="contenedor_sinTexto_img" src="./img/Muñeco.png" />
+          <h3 class="contenedor_sinTexto_titulo">
+            <strong>Ningún mensaje fue encontrado</strong>
+          </h3>
+          <p class="contenedor_sinTexto_p">
+            Ingrese el texto que desea encriptar o desencriptar
+          </p>
+        </div>
       </section>
     </main>
-    <footer id="footer">Hector García</footer>
+    <footer class="footer" id="footer">Oracle One - Hector García</footer>
     <script src="app.js"></script>
     <script
       src="https://code.jquery.com/jquery-1.12.4.min.js"
